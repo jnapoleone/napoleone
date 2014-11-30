@@ -7,3 +7,7 @@ sites/*/private
 
 # Ignore all development modules
 sites/all/modules/devel
+
+# Ignore third party generated files
+.idea
+.idea/*
