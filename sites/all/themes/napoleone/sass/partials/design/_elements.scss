@@ -1,0 +1,31 @@
+body {
+
+	@include content-fade-in();
+	color: $alpha-font-color;
+}
+
+#{headings()} {
+
+	margin-top: 0;
+	@include trailer( 1 );
+}
+
+h1 {
+
+	@include adjust-font-size-to( ms( 4, 16px, $minor-third ) );
+}
+
+h2 {
+
+	@include adjust-font-size-to( ms( 3, 16px, $minor-third ) );
+}
+
+h3 {
+
+	@include adjust-font-size-to( ms( 2, 16px, $minor-third ) );
+}
+
+h4 {
+
+	@include adjust-font-size-to( ms( 1, 16px, $minor-third) );
+}

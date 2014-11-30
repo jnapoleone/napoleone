@@ -1,0 +1,43 @@
+
+.site-name {
+
+	@include leader( 1 );
+	@include adjust-font-size-to( ms(7, $base-font-size, $minor-third ) );
+	text-align: center;
+	$lines: lines-for-font-size(ms(7, $base-font-size, $minor-third ));
+	content: rhythm($lines);
+
+	.project--dt & {
+
+		color: $dt-color;
+	}
+
+	.project--rtt & {
+
+		color: $rtt-color;
+	}
+
+	.project--tt & {
+
+		color: $tt-color;
+	}
+
+	.project--twig & {
+
+		color: $twig-color;
+	}
+
+	.project--rte & {
+
+		color: $rte-color;
+	}
+	@include breakpoint( $bp-site-name-medium ) {
+
+		@include adjust-font-size-to( ms( 9, $base-font-size, $minor-third ) );
+	}
+
+	@include breakpoint( $bp-site-name-large ) {
+
+		@include adjust-font-size-to( ms( 11, $base-font-size, $minor-third ) );
+	}
+}

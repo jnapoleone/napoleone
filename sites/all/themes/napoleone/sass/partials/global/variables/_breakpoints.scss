@@ -1,0 +1,15 @@
+$bp-project-tile-2-cols-res  : 480px;
+$bp-project-tile-3-cols-res  : 1024px;
+$bp-project-tile-4-cols-res  : 1280px;
+$bp-site-max-width-res       : 1280px;
+$bp-project-desc-width-auto-res : 800px;
+$bp-project-desc-font-large-res : 1024px;
+
+$bp-project-tile-2-cols-grid : 'screen' $bp-project-tile-2-cols-res;
+$bp-project-tile-3-cols-grid : 'screen' $bp-project-tile-3-cols-res;
+$bp-project-tile-4-cols-grid : 'screen' $bp-project-tile-4-cols-res;
+$bp-site-name-medium         : $bp-project-tile-2-cols-grid;
+$bp-site-name-large          : $bp-project-tile-3-cols-grid;
+$bp-site-max-width           : 'screen' $bp-site-max-width-res;
+$bp-project-desc-width-auto  : 'screen' $bp-project-desc-width-auto-res;
+$bp-project-desc-font-large  : 'screen' $bp-project-desc-font-large-res;

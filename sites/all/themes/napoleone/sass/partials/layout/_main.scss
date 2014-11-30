@@ -1,0 +1,16 @@
+.l-main {
+
+
+	@include clearfix;
+//	margin-top: - get-header-height( ms( 7, 16px, $minor-third ) );
+
+	@include breakpoint( $bp-site-name-medium ) {
+
+//		margin-top: - get-header-height( ms( 9, $base-font-size, $minor-third ) );
+	}
+
+	@include breakpoint( $bp-site-name-large ) {
+
+//		margin-top: - get-header-height( ms( 11, $base-font-size, $minor-third ) );
+	}
+}

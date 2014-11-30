@@ -1,0 +1,142 @@
+.project--header {
+
+	$gutter-width: gutter-span();
+	height: 50vh;
+	overflow: hidden;
+
+//	@include breakpoint( handheld and (orientation: landscape) and ( max-height: 768px )) {
+//
+//		height: 100vh;
+//	}
+
+	@include breakpoint( $bp-site-max-width ) {
+		max-width: $l-max-width;
+		margin-right: auto;
+		margin-left: auto;
+	}
+}
+
+.project--demo {
+
+	$gutter-width: gutter-span();
+	position: relative;
+	height: 50vh;
+	padding-right: $gutter-width;
+	padding-left: $gutter-width;
+	@include transform-style( preserve-3d );
+
+//	@include breakpoint( handheld and (orientation: landscape) and ( max-height: 768px )) {
+//
+//		height: 100vh;
+//	}
+
+	@include breakpoint( $bp-site-max-width ) {
+
+		padding-right: 0;
+		padding-left: 0;
+	}
+
+	.project--dt & {
+
+		 background: $dt-color;
+	 }
+
+	.project--rtt & {
+
+		background: $rtt-color;
+	}
+
+	.project--tt & {
+
+		background: $tt-color;
+	}
+
+	.project--twig & {
+
+		background: $twig-color;
+	}
+
+	.project--rte & {
+
+		background: $rte-color;
+	}
+}
+
+.project__image {
+
+	position: absolute;
+	left: 50%;
+	max-height: 50vh;
+	@include translate( -50%, -75% );
+
+	@include breakpoint( (orientation: landscape) ) {
+
+		max-height: 25vh;
+	}
+
+	@include breakpoint( (orientation: landscape ) and ( 1024px )) {
+
+		max-height: 40vh;
+	}
+}
+
+
+
+.project__header {
+
+	text-align: center;
+}
+
+.project--demo-content {
+
+	$gutter-width: gutter-span();
+	$translate-y : 50 - $gutter-width;
+	position: absolute;
+	top: 50%; //25vh;
+	left: 50%;
+	width: 100% - ($gutter-width*2);
+	@include translate( -50%, -50% );
+	color: #ffffff;
+	text-align: center;
+
+	.project--dt & {
+
+		@include text-shadow( 1px 1px 2px $dt-shadow-color );
+	}
+
+	.project--rtt & {
+
+		@include text-shadow( 1px 1px 2px $rtt-shadow-color );
+	}
+
+	.project--tt & {
+
+		@include text-shadow( 1px 1px 2px $tt-shadow-color );
+	}
+
+	.project--twig & {
+
+		@include text-shadow( 1px 1px 2px $twig-shadow-color );
+	}
+
+	.project--rte & {
+
+		@include text-shadow( 1px 1px 2px $rte-shadow-color );
+	}
+
+	@include breakpoint( $bp-project-desc-width-auto ) {
+
+		width: auto;
+//		@include adjust-font-size-to( ms( 1, 16px, $minor-third ) );
+	}
+
+	@include breakpoint( 768px ) {
+
+		@include adjust-font-size-to( ms( 1, 16px, $golden ) );
+	}
+
+	@include breakpoint( $bp-project-desc-font-large ) {
+
+		@include adjust-font-size-to( ms( 2, 16px, $minor-third ) );
+	}
+}

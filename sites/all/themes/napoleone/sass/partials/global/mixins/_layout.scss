@@ -1,0 +1,14 @@
+%gutter-margins {
+
+	$gutter-width: gutter-span();
+	margin-right: $gutter-width;
+	margin-left: $gutter-width;
+}
+
+@function get-header-height( $font-size ) {
+
+	$site-name-font-size: $font-size;
+	$site-name-lines: lines-for-font-size( $site-name-font-size );
+	$one-line: rhythm( 1, $base-font-size );
+	@return rhythm($site-name-lines) + ( $one-line * 2 );
+}

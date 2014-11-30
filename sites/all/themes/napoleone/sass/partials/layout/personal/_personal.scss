@@ -1,0 +1,19 @@
+.personal {
+
+}
+
+.personal--content--wrapper {
+
+}
+
+.personal--content {
+
+	height: 100vh;
+}
+
+.personal--tag {
+
+	@include vertical-center();
+	margin-bottom: 0;
+	text-align: center;
+}

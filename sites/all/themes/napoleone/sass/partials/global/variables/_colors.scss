@@ -1,0 +1,22 @@
+$alpha-color       : #333333;
+$beta-color        : #666666;
+$gamma-color       : #999999;
+$delta-color       : #CCCCCC;
+$epsilon-color     : #EEEEEE;
+
+$dt-color          : #c32b62;
+$dt-shadow-color   : darken( $dt-color, 25 );
+$rtt-color         : #0588cb;
+$rtt-shadow-color  : darken( $rtt-color, 25 );
+$tt-color          : #292763;
+$tt-shadow-color   : darken( $tt-color, 25 );
+$twig-color        : #83b739;
+$twig-shadow-color : darken( $twig-color, 25 );
+$rte-color         : #0588cb;
+$rte-shadow-color  : darken( $rte-color, 25 );
+
+
+$alpha-font-color  : $alpha-color;
+$beta-font-color   : $beta-color;
+$gamma-font-color  : $gamma-color;
+$delta-font-color  : $delta-color;

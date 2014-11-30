@@ -1,0 +1,62 @@
+name = Napoleone
+description = Napoleone theme.
+core = 7.x
+base theme = aurora
+
+; ========================================
+; Regions
+; ========================================
+
+regions[header] = Header
+regions[main_prefix] = Main Region Prefix
+regions[content] = Main Region
+regions[main_suffix] = Main Region Suffix
+regions[footer] = Footer
+
+; ========================================
+; Stylesheets
+; ========================================
+
+stylesheets[all][0] = css/style.css
+stylesheets[print][0] = css/print.css
+
+; ========================================
+; Scripts
+; ========================================
+
+scripts[0] = js/script.min.js
+
+; ========================================
+; Modernizr
+; ========================================
+
+modernizr[tests][0] = css_boxsizing
+plugins[panels][layouts] = layouts
+
+; ========================================
+; Settings
+; ========================================
+
+settings[toggle_node_user_picture] = 0
+settings[toggle_comment_user_picture] = 1
+settings[toggle_comment_user_verification] = 1
+settings[default_logo] = 0
+settings[logo_path] =
+settings[logo_upload] =
+settings[default_favicon] = 0
+settings[favicon_path] =
+settings[favicon_upload] =
+settings[hide_recomended_modules] = 0
+settings[aurora_min_ie_support] = 9
+settings[aurora_html_tags] = 1
+settings[aurora_typekit_id] = mlx3jgj
+settings[aurora_livereload] = 35729
+settings[aurora_livereload_port] = 35729
+settings[magic_css_excludes] = :core
+:contrib
+ settings[magic_footer_js] = 1
+ settings[magic_library_head] = 0
+                            settings[magic_experimental_js] = 0
+                            settings[magic_js_excludes] = :contrib
+:base-theme
+:settings
