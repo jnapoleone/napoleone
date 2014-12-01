@@ -24,7 +24,7 @@ stylesheets[print][0] = css/print.css
 ; Scripts
 ; ========================================
 
-scripts[0] = js/script.min.js
+;scripts[0] = js/script.min.js
 
 ; ========================================
 ; Modernizr
