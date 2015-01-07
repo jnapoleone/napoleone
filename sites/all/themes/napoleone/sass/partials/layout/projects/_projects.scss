@@ -20,15 +20,15 @@
 
 	$gutter-width: gutter-span();
 	position: relative;
-	height: 50vh;
+	height: 45vh;
 	padding-right: $gutter-width;
 	padding-left: $gutter-width;
 	@include transform-style( preserve-3d );
 
-//	@include breakpoint( handheld and (orientation: landscape) and ( max-height: 768px )) {
-//
-//		height: 100vh;
-//	}
+	.project--rte & {
+
+		height: 50vh;
+	}
 
 	@include breakpoint( $bp-site-max-width ) {
 
@@ -66,18 +66,9 @@
 
 	position: absolute;
 	left: 50%;
-	max-height: 50vh;
-	@include translate( -50%, -75% );
-
-	@include breakpoint( (orientation: landscape) ) {
-
-		max-height: 25vh;
-	}
-
-	@include breakpoint( (orientation: landscape ) and ( 1024px )) {
-
-		max-height: 40vh;
-	}
+//	max-height: 50vh;
+	max-height: 75%;
+	@include translate( -50%, -50% );
 }
 
 
@@ -130,13 +121,41 @@
 //		@include adjust-font-size-to( ms( 1, 16px, $minor-third ) );
 	}
 
-	@include breakpoint( 768px ) {
+	@include breakpoint( $bp-medium-portrait ) {
 
+		content: 'foobar';
 		@include adjust-font-size-to( ms( 1, 16px, $golden ) );
 	}
 
 	@include breakpoint( $bp-project-desc-font-large ) {
 
 		@include adjust-font-size-to( ms( 2, 16px, $minor-third ) );
+	}
+}
+
+.project--next {
+
+	position: relative;
+	left: 50%;
+	@include translateX( -50% );
+
+	.project--dt & {
+
+		@include triangle( $dt-color, 5vh, 50px, 180);
+	}
+
+	.project--rtt & {
+
+		@include triangle( $rtt-color, 5vh, 50px, 180);
+	}
+
+	.project--tt & {
+
+		@include triangle( $tt-color, 5vh, 50px, 180);
+	}
+
+	.project--twig & {
+
+		@include triangle( $twig-color, 5vh, 50px, 180);
 	}
 }

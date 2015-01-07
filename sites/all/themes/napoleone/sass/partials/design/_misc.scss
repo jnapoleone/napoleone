@@ -5,7 +5,6 @@
 	@include adjust-font-size-to( ms(7, $base-font-size, $minor-third ) );
 	text-align: center;
 	$lines: lines-for-font-size(ms(7, $base-font-size, $minor-third ));
-	content: rhythm($lines);
 
 	.project--dt & {
 
@@ -31,12 +30,8 @@
 
 		color: $rte-color;
 	}
-	@include breakpoint( $bp-site-name-medium ) {
-
-		@include adjust-font-size-to( ms( 9, $base-font-size, $minor-third ) );
-	}
-
-	@include breakpoint( $bp-site-name-large ) {
+//	@include breakpoint( $bp-site-name-medium ) {
+	@include breakpoint( $bp-medium-portrait) {
 
 		@include adjust-font-size-to( ms( 11, $base-font-size, $minor-third ) );
 	}
