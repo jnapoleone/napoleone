@@ -21,12 +21,6 @@ stylesheets[all][0] = css/style.css
 stylesheets[print][0] = css/print.css
 
 ; ========================================
-; Scripts
-; ========================================
-
-;scripts[0] = js/script.min.js
-
-; ========================================
 ; Modernizr
 ; ========================================
 
@@ -58,5 +52,7 @@ settings[magic_css_excludes] = :core
  settings[magic_library_head] = 0
                             settings[magic_experimental_js] = 0
                             settings[magic_js_excludes] = :contrib
-:base-theme
-:settings
+                                    :base-theme
+                                    :settings
+                                    :contrib
+settings[magic_footer_js] = 1

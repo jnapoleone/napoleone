@@ -11,3 +11,6 @@ sites/all/modules/devel
 # Ignore third party generated files
 .idea
 .idea/*
+
+# Ignore theme configuration
+sites/all/themes/napoleone/napoleone.info
