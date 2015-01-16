@@ -1,5 +1,6 @@
 .l-main {
 
+	overflow: hidden;
 
 	@include clearfix;
 //	margin-top: - get-header-height( ms( 7, 16px, $minor-third ) );

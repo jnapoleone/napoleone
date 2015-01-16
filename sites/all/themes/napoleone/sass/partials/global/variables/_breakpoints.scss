@@ -7,6 +7,8 @@ $bp-site-max-width-res       : 1280px;
 $bp-project-desc-width-auto-res : 800px;
 $bp-project-desc-font-large-res : 1024px;
 $bp-medium-portrait-res         : 600px;
+$bp-p-image-margin-bottom-res   : min-height 570px;
+$bp-more-link-top-res           : min-height 548px;
 
 $bp-project-tile-2-cols-grid : 'screen' $bp-project-tile-2-cols-res;
 $bp-project-tile-3-cols-grid : 'screen' $bp-project-tile-3-cols-res;
@@ -17,3 +19,5 @@ $bp-site-max-width           : 'screen' $bp-site-max-width-res;
 $bp-project-desc-width-auto  : 'screen' $bp-project-desc-width-auto-res;
 $bp-project-desc-font-large  : 'screen' $bp-project-desc-font-large-res;
 $bp-medium-portrait          : 'screen' $bp-medium-portrait-res;
+$bp-more-link-top            : 'screen' $bp-more-link-top-res;
+$bp-p-image-margin-bottom    : 'screen' $bp-p-image-margin-bottom-res;

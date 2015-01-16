@@ -1,5 +1,14 @@
 .l-header {
-	top: 0;
-	width: 100%;
-	overflow: hidden;
+	max-width: $bp-site-max-width-res;
+//	@include leader(.5, $base-font-size);
+//	@include trailer(.5, $base-font-size);
+	margin-right: auto;
+	margin-left: auto;
+	@include adjust-font-size-to( ms(7, $base-font-size, $minor-third) );
+	text-align:center;
+
+	@include breakpoint( 768px ) {
+
+		@include adjust-font-size-to( ms( 10, $base-font-size, $minor-third ) );
+	}
 }

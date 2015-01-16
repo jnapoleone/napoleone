@@ -1,161 +1,178 @@
-.project--header {
+$projects: (
+	dt: $dt-color,
+	rtt: $rtt-color,
+	tt: $tt-color,
+	twig: $twig-color,
+	rte: $rte-color
+);
 
-	$gutter-width: gutter-span();
-	height: 50vh;
-	overflow: hidden;
+@each $project, $color in $projects {
 
-//	@include breakpoint( handheld and (orientation: landscape) and ( max-height: 768px )) {
-//
-//		height: 100vh;
-//	}
-
-	@include breakpoint( $bp-site-max-width ) {
-		max-width: $l-max-width;
-		margin-right: auto;
-		margin-left: auto;
+	.p-#{$project}__header {
+		color: $color;
 	}
 }
 
-.project--demo {
+.p__section {
+	overflow: hidden;
+}
+
+.p-content {
+
+	height: 45vh;
+	margin-top: 50vh;
+
+	@include breakpoint( 'screen' (orientation portrait)) {
+
+		height: 55vh;
+		margin-top: 40vh;
+	}
+
+	@include breakpoint( 'screen' (min-aspect-ratio '1/1')) {
+
+		height: 45vh;
+		margin-top: 50vh;
+	}
+}
+
+@each $project, $bgcolor in $projects {
+
+	.p-#{$project}-content {
+		background-color: $bgcolor;
+
+		.p-description {
+
+			height: 45vh;
+
+			@include breakpoint( 'screen' (orientation portrait)) {
+
+				height: 55vh;
+			}
+
+			@include breakpoint( 'screen' (min-aspect-ratio '1/1') ) {
+
+				height: 45vh;
+			}
+		}
+	}
+}
+
+.p-content {
 
 	$gutter-width: gutter-span();
-	position: relative;
-	height: 45vh;
 	padding-right: $gutter-width;
 	padding-left: $gutter-width;
 	@include transform-style( preserve-3d );
+	color: #ffffff;
+	text-align: center;
+}
 
-	.project--rte & {
+.p-rte-content {
+
+	height: 50vh;
+	margin-top: 50vh;
+
+	@include breakpoint( 'screen' (orientation landscape)) {
+
+	height: 50vh;
+	margin-top: 80vh;
+}
+
+	.p-description {
 
 		height: 50vh;
 	}
+}
 
-	@include breakpoint( $bp-site-max-width ) {
+.p-content-wrapper {
+	@include translateY( -50vh );
 
-		padding-right: 0;
-		padding-left: 0;
+	@include breakpoint( 'screen' (orientation portrait)) {
+
+		@include translateY( -40vh );
 	}
 
-	.project--dt & {
+	@include breakpoint( 'screen' (min-aspect-ratio '1/1')) {
 
-		 background: $dt-color;
-	 }
-
-	.project--rtt & {
-
-		background: $rtt-color;
-	}
-
-	.project--tt & {
-
-		background: $tt-color;
-	}
-
-	.project--twig & {
-
-		background: $twig-color;
-	}
-
-	.project--rte & {
-
-		background: $rte-color;
+		@include translateY( -50vh );
 	}
 }
 
-.project__image {
+.p-image__link {
+	position: relative;
+	display: block;
+	vertical-align: middle;
+	height: 50vh;
+
+	@include breakpoint( 'screen' (orientation portrait)) {
+
+		height: 40vh;
+	}
+
+	@include breakpoint( 'screen' (min-aspect-ratio '1/1')) {
+
+		height: 50vh;
+	}
+}
+
+.p__image {
 
 	position: absolute;
+	bottom: 0;
 	left: 50%;
-//	max-height: 50vh;
-	max-height: 75%;
-	@include translate( -50%, -50% );
-}
+	margin-bottom: - (image_height('digital-treasures.png')*.10);
+	@include translateX(-50%);
 
+	@include breakpoint( 'screen' 340px (orientation portrait)) {
 
-
-.project__header {
-
-	text-align: center;
-}
-
-.project--demo-content {
-
-	$gutter-width: gutter-span();
-	$translate-y : 50 - $gutter-width;
-	position: absolute;
-	top: 50%; //25vh;
-	left: 50%;
-	width: 100% - ($gutter-width*2);
-	@include translate( -50%, -50% );
-	color: #ffffff;
-	text-align: center;
-
-	.project--dt & {
-
-		@include text-shadow( 1px 1px 2px $dt-shadow-color );
+		max-width: 90%;
 	}
 
-	.project--rtt & {
+	@include breakpoint( 'screen' (min-aspect-ratio '1/1')) {
 
-		@include text-shadow( 1px 1px 2px $rtt-shadow-color );
-	}
-
-	.project--tt & {
-
-		@include text-shadow( 1px 1px 2px $tt-shadow-color );
-	}
-
-	.project--twig & {
-
-		@include text-shadow( 1px 1px 2px $twig-shadow-color );
-	}
-
-	.project--rte & {
-
-		@include text-shadow( 1px 1px 2px $rte-shadow-color );
-	}
-
-	@include breakpoint( $bp-project-desc-width-auto ) {
-
-		width: auto;
-//		@include adjust-font-size-to( ms( 1, 16px, $minor-third ) );
-	}
-
-	@include breakpoint( $bp-medium-portrait ) {
-
-		content: 'foobar';
-		@include adjust-font-size-to( ms( 1, 16px, $golden ) );
-	}
-
-	@include breakpoint( $bp-project-desc-font-large ) {
-
-		@include adjust-font-size-to( ms( 2, 16px, $minor-third ) );
+		max-width: 100%;
 	}
 }
 
-.project--next {
+.p-description {
+
+	p {
+		position: relative;
+		top: 50%;
+		margin-bottom: 0;
+		@include translateY(-50%);
+	}
+}
+.p-next {
 
 	position: relative;
 	left: 50%;
-	@include translateX( -50% );
+	@include translateX(-50%);
+	cursor: pointer;
+}
 
-	.project--dt & {
-
-		@include triangle( $dt-color, 5vh, 50px, 180);
+@each $project, $color in $projects {
+	.p-#{$project}-next{
+		@include triangle( $color, 5vh, 50px, 180);
 	}
+}
 
-	.project--rtt & {
+.p-next--small {
 
-		@include triangle( $rtt-color, 5vh, 50px, 180);
-	}
+	margin-top: -5vh;
+	margin-left: -12.5px;
+	@include triangle( #ffffff, 2.5vh, 25px, 180);
+	@include transform-style( preserve-3d );
+}
+.p-next__link {
 
-	.project--tt & {
+	position: absolute;
+	top: - rhythm( 1.5, $base-font-size );
+	@include translateX(-50% );
+	color:#ffffff;
 
-		@include triangle( $tt-color, 5vh, 50px, 180);
-	}
+	@include breakpoint( $bp-more-link-top ) {
 
-	.project--twig & {
-
-		@include triangle( $twig-color, 5vh, 50px, 180);
+		top: - rhythm( 2, $base-font-size );
 	}
 }

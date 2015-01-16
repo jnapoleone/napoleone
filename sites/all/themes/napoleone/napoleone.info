@@ -21,6 +21,13 @@ stylesheets[all][0] = css/style.css
 stylesheets[print][0] = css/print.css
 
 ; ========================================
+; Scripts
+; ========================================
+scripts[] = bower_components/jquery.scrollTo/jquery.scrollTo.js
+scripts[] = bower_components/protonet/jquery.inview/jquery.inview.js
+scripts[] = js/script.js
+
+; ========================================
 ; Modernizr
 ; ========================================
 
