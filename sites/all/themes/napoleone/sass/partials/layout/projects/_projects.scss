@@ -14,6 +14,7 @@ $projects: (
 }
 
 .p__section {
+	width: 100%;
 	overflow: hidden;
 }
 
@@ -28,11 +29,16 @@ $projects: (
 		margin-top: 40vh;
 	}
 
-	@include breakpoint( 'screen' (min-aspect-ratio '1/1')) {
+//	@include breakpoint( 'screen' (orientation landscape)) {
+//		height: 100vh;
+//		margin-top: 100vh;
+//	}
 
-		height: 45vh;
-		margin-top: 50vh;
-	}
+//	@include breakpoint( 'screen' (min-aspect-ratio '1/1')) {
+//
+//		height: 45vh;
+//		margin-top: 50vh;
+//	}
 }
 
 @each $project, $bgcolor in $projects {
@@ -72,16 +78,18 @@ $projects: (
 	height: 50vh;
 	margin-top: 50vh;
 
-	@include breakpoint( 'screen' (orientation landscape)) {
+//	@include breakpoint( 'screen' (max-width 600px) (max-height 600px) (orientation landscape)) {
+//
+//	height: 50vh;
+//	margin-top: 80vh;
+//	}
+//
+//	@include breakpoint( 'screen' (min-aspect-ratio 1/1 ) ) {
+//
+//		height: 50vh;
+//		margin-top: 50vh;
+//	}
 
-	height: 50vh;
-	margin-top: 80vh;
-}
-
-	.p-description {
-
-		height: 50vh;
-	}
 }
 
 .p-content-wrapper {
@@ -123,26 +131,38 @@ $projects: (
 	margin-bottom: - (image_height('digital-treasures.png')*.10);
 	@include translateX(-50%);
 
-	@include breakpoint( 'screen' 340px (orientation portrait)) {
-
-		max-width: 90%;
-	}
-
-	@include breakpoint( 'screen' (min-aspect-ratio '1/1')) {
-
-		max-width: 100%;
-	}
+//	@include breakpoint( 'screen' 340px (orientation portrait)) {
+//
+//		max-width: 90%;
+//	}
+//
+//	@include breakpoint( 'screen' (min-aspect-ratio '1/1')) {
+//
+//		max-width: 100%;
+//	}
 }
 
 .p-description {
 
+	height: 50vh;
 	p {
 		position: relative;
 		top: 50%;
 		margin-bottom: 0;
 		@include translateY(-50%);
+
+		@include breakpoint( screen (400px) (min-height 600px) ) {
+
+			@include adjust-font-size-to(ms(1, $base-font-size, $minor-third), 1.3);
+		}
+
+		@include breakpoint( screen (600px) (min-height 650px)) {
+
+			@include adjust-font-size-to(ms(2, $base-font-size, $minor-third) );
+		}
 	}
 }
+
 .p-next {
 
 	position: relative;

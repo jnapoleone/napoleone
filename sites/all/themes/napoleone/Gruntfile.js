@@ -6,22 +6,22 @@ module.exports = function (grunt) {
 
   grunt.initConfig({
     watch: {
-      options: {
-        livereload: 35729
-      },
+      //options: {
+      //  livereload: 35729
+      //},
       sass: {
         files: [paths.sass + '/{,**/}*.scss'],
         tasks: ['compass:dev'],
         options: {
-          livereload: false
+          livereload: true
         }
       },
-      css: {
-        files: [paths.css + '/{,**/}*.css']
-      },
-      images: {
-        files: [paths.img + '/**']
-      },
+      //css: {
+      //  files: [paths.css + '/{,**/}*.css']
+      //},
+      //images: {
+      //  files: [paths.img + '/**']
+      //},
       js: {
         files: [
           paths.js + '/{,**/}*.js',
@@ -169,6 +169,7 @@ module.exports = function (grunt) {
   });
 
   grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-simple-watch');
   grunt.loadNpmTasks('grunt-contrib-compass');
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-imagemin');

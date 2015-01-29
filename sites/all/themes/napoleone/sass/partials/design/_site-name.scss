@@ -1,0 +1,12 @@
+.site-name {
+
+	.maintenance-page & {
+
+		@include adjust-font-size-to(ms(8, $base-font-size, $minor-third), 1);
+
+		@include breakpoint( 'screen' 500px ) {
+
+			@include adjust-font-size-to(ms(10, $base-font-size, $minor-third), 1, ms(4, $base-font-size, $minor-third));
+		}
+	}
+}

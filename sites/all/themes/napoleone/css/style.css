@@ -627,12 +627,7 @@ th {
 }
 
 .l-main {
-  overflow: hidden;
-}
-.l-main:after {
-  content: "";
-  display: table;
-  clear: both;
+  height: 100%;
 }
 
 .personal--content {
@@ -671,6 +666,7 @@ th {
 }
 
 .p__section {
+  width: 100%;
   overflow: hidden;
 }
 
@@ -682,12 +678,6 @@ th {
   .p-content {
     height: 55vh;
     margin-top: 40vh;
-  }
-}
-@media screen and (min-aspect-ratio: 1 / 1) {
-  .p-content {
-    height: 45vh;
-    margin-top: 50vh;
   }
 }
 
@@ -790,15 +780,6 @@ th {
   height: 50vh;
   margin-top: 50vh;
 }
-@media screen and (orientation: landscape) {
-  .p-rte-content {
-    height: 50vh;
-    margin-top: 80vh;
-  }
-}
-.p-rte-content .p-description {
-  height: 50vh;
-}
 
 .p-content-wrapper {
   -moz-transform: translateY(-50vh);
@@ -850,17 +831,10 @@ th {
   -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
 }
-@media screen and (min-width: 21.25em) and (orientation: portrait) {
-  .p__image {
-    max-width: 90%;
-  }
-}
-@media screen and (min-aspect-ratio: 1 / 1) {
-  .p__image {
-    max-width: 100%;
-  }
-}
 
+.p-description {
+  height: 50vh;
+}
 .p-description p {
   position: relative;
   top: 50%;
@@ -869,6 +843,22 @@ th {
   -ms-transform: translateY(-50%);
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
+}
+@media screen and (min-width: 25em) and (min-height: 37.5em) {
+  .p-description p {
+    font-size: 19px;
+    font-size: 1.2rem;
+    line-height: 31px;
+    line-height: 1.95rem;
+  }
+}
+@media screen and (min-width: 37.5em) and (min-height: 40.625em) {
+  .p-description p {
+    font-size: 23px;
+    font-size: 1.44rem;
+    line-height: 48px;
+    line-height: 3rem;
+  }
 }
 
 .p-next {
@@ -960,6 +950,11 @@ th {
   width: 100%;
   background: rgba(255, 255, 255, 0.9);
   z-index: 6;
+}
+
+html,
+body {
+  height: 100%;
 }
 
 body {

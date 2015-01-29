@@ -13,6 +13,7 @@
     "grunt-contrib-watch": "~0.4.3",
     "grunt-pagespeed": "^0.3.0",
     "grunt-parallel": "~0.1.0",
+    "grunt-simple-watch": "^0.1.2",
     "grunt-svgmin": "~0.1.0"
   },
   "scripts": {

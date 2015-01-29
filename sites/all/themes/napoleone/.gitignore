@@ -1,4 +1,10 @@
 .sass-cache
-bower_components/
 node_modules/
 .vendor/bundle
+
+# Ignore development bower components
+bower_components/borealis
+bower_components/domready
+bower_components/eq.js
+bower_components/jquery
+bower_components/north

@@ -13,107 +13,108 @@
 (function ($, Drupal, window, document, undefined) {
 
 
-// To understand behaviors, see https://drupal.org/node/756722#behaviors
-Drupal.behaviors.my_custom_behavior = {
-  attach: function(context, settings) {
+  // To understand behaviors, see https://drupal.org/node/756722#behaviors
+  Drupal.behaviors.my_custom_behavior = {
+    attach: function(context, settings) {
 
-    // Place your code here
-  }
-};
+      // Place your code here
+    }
+  };
 
-Drupal.behaviors.moreButton = {
-  attach: function(context, settings) {
+  Drupal.behaviors.projectOnepageScroll = {
 
-    var $nextLink = $('.p-next');
+    attach: function(context,settings) {
+      $('.l-main').onepage_scroll({
+        sectionContainer: "section",
+        easing: "ease",
+        pagination: false
+      });
+    }
+  };
 
-    $nextLink.on( 'click', function () {
-      var $nextProject = $(this).closest('.p__section').next();
-      $('html, body').scrollTo($nextProject,500);
-      //$("html, body").animate({
-      //  scrollTop: $closestProject.next().offset().bottom
-      //},1000);
-    });
-  }
-};
+  Drupal.behaviors.projectMoreButton = {
+    attach: function(context,settings) {
+      $('.p-next').on('click', function () {
+        $('.l-main').moveDown();
+      });
+    }
+  };
 
-Drupal.behaviors.projectDTInView = {
-  attach: function(context,settings) {
 
-    $('.p-dt-description').bind('inview', function(e, isInView, visiblePartX, visiblePartY){
-      if(isInView) {
+  Drupal.behaviors.projectDTInView = {
+    attach: function(context,settings) {
 
-        //if(visiblePartY=='bottom'){
-
+      $('.p-dt-description').bind('inview', function(e, isInView, visiblePartX, visiblePartY){
+        if(isInView) {
           $('.l-header').addClass('p-dt__header');
-        //}
-      } else {
-        $('.l-header').removeClass('p-dt__header');
-      }
-    });
-  }
-};
+        } else {
+          $('.l-header').removeClass('p-dt__header');
+        }
+      });
+    }
+  };
 
-Drupal.behaviors.projectRTTInView = {
-  attach: function(context,settings){
-    $('.p-rtt-description').bind('inview', function(e, isInView, visiblePartX, visiblePartY){
-      if(isInView) {
+  Drupal.behaviors.projectRTTInView = {
+    attach: function(context,settings){
+      $('.p-rtt-description').bind('inview', function(e, isInView, visiblePartX, visiblePartY){
+        if(isInView) {
 
-        //if(visiblePartY=='bottom'){
+          //if(visiblePartY=='bottom'){
 
-          $('.l-header').addClass('p-rtt__header');
-        //}
-      }else {
-        $('.l-header').removeClass('p-rtt__header');
-      }
-    });
-  }
-};
+            $('.l-header').addClass('p-rtt__header');
+          //}
+        }else {
+          $('.l-header').removeClass('p-rtt__header');
+        }
+      });
+    }
+  };
 
-Drupal.behaviors.projectTTInView = {
-  attach: function(context,settings){
-    $('.p-tt-description').bind('inview', function(e, isInView, visiblePartX, visiblePartY){
-      if(isInView) {
+  Drupal.behaviors.projectTTInView = {
+    attach: function(context,settings){
+      $('.p-tt-description').bind('inview', function(e, isInView, visiblePartX, visiblePartY){
+        if(isInView) {
 
-        //if(visiblePartY=='bottom'){
+          //if(visiblePartY=='bottom'){
 
-          $('.l-header').addClass('p-tt__header');
-        //}
-      }else {
-        $('.l-header').removeClass('p-tt__header');
-      }
-    });
-  }
-};
+            $('.l-header').addClass('p-tt__header');
+          //}
+        }else {
+          $('.l-header').removeClass('p-tt__header');
+        }
+      });
+    }
+  };
 
-Drupal.behaviors.projectTWIGInView = {
-  attach: function(context,settings){
-    $('.p-twig-description').bind('inview', function(e, isInView, visiblePartX, visiblePartY){
-      if(isInView) {
+  Drupal.behaviors.projectTWIGInView = {
+    attach: function(context,settings){
+      $('.p-twig-description').bind('inview', function(e, isInView, visiblePartX, visiblePartY){
+        if(isInView) {
 
-        //if(visiblePartY=='bottom'){
+          //if(visiblePartY=='bottom'){
 
-          $('.l-header').addClass('p-twig__header');
-        //}
-      }else {
-        $('.l-header').removeClass('p-twig__header');
-      }
-    });
-  }
-};
+            $('.l-header').addClass('p-twig__header');
+          //}
+        }else {
+          $('.l-header').removeClass('p-twig__header');
+        }
+      });
+    }
+  };
 
-Drupal.behaviors.projectRTEInView = {
-  attach: function(context,settings){
-    $('.p-rte-description').bind('inview', function(e, isInView, visiblePartX, visiblePartY){
-      if(isInView) {
+  Drupal.behaviors.projectRTEInView = {
+    attach: function(context,settings){
+      $('.p-rte-description').bind('inview', function(e, isInView, visiblePartX, visiblePartY){
+        if(isInView) {
 
-        //if(visiblePartY=='bottom'){
+          //if(visiblePartY=='bottom'){
 
-          $('.l-header').addClass('p-rte__header');
-        //}
-      }else {
-        $('.l-header').removeClass('p-rte__header');
-      }
-    });
-  }
-};
+            $('.l-header').addClass('p-rte__header');
+          //}
+        }else {
+          $('.l-header').removeClass('p-rte__header');
+        }
+      });
+    }
+  };
 })(jQuery, Drupal, this, this.document);
