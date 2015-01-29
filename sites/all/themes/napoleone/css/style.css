@@ -607,6 +607,17 @@ th {
   height: auto;
 }
 
+.maintenance-page .l-page {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
 .l-header {
   max-width: 1280px;
   margin-right: auto;
@@ -1007,6 +1018,21 @@ p {
   margin-top: 0;
   margin-bottom: 24px;
   margin-bottom: 1.5rem;
+}
+
+.maintenance-page .site-name {
+  font-size: 69px;
+  font-size: 4.29982rem;
+  line-height: 24px;
+  line-height: 1.5rem;
+}
+@media screen and (min-width: 31.25em) {
+  .maintenance-page .site-name {
+    font-size: 99px;
+    font-size: 6.19174rem;
+    line-height: 24px;
+    line-height: 1.5rem;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
